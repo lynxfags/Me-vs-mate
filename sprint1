@@ -1,0 +1,53 @@
+"""
+Raaaaaaaaaaahhhhhh
+This is a comment this will not affect the code at all
+"""
+
+def getInt(prompt):
+  try:
+    num = input(prompt)
+    return int(num)
+  except:
+    print('Invalid response')
+    info()
+
+def info():
+  userName = input('What is your name?  >  ')  
+  userHeight = int(input('How tall are you? (cm) > '))
+  userHeightInches = userHeight / 2.54
+  roundedUserHeightInches = round(userHeightInches,2)
+  userWeight = int(input('What weight are you? (kg) > '))
+  userWeightPounds = userWeight * 2.2
+  roundedUserWeightPounds = round(userWeightPounds,2)
+  userAge = int(input('What is your age?  >  '))
+  print('')
+  mateName = input('What is your mates name?  >  ')
+  mateHeight = int(input('How tall is your mate? (cm) > '))
+  mateHeightInches = mateHeight / 2.54
+  roundedMateHeightInches = round(mateHeightInches,2)
+  mateWeight = int(input('What weight is your mate? (kg) > '))
+  mateWeightPounds = mateWeight * 2.2
+  roundedMateWeightPounds = round(mateWeightPounds,2)
+  mateAge = int(input('What is your mates age?  >  '))
+  heightDiffCm = userHeight - mateHeight
+  heightDiffInches = userHeightInches - mateHeightInches
+  roundedHeightDiffInches = round(heightDiffInches,2)
+  weightDiffKgs = userWeight - mateWeight
+  weightDiffPounds = userWeightPounds - mateWeightPounds
+  roundedWeightDiffPounds = round(weightDiffPounds,2)
+  ageGap = userAge - mateAge
+  print('')
+  
+  print('My name is {} and I am {} years old.'.format(userName, userAge))
+  print('My height is {}cms or {}" and my weight is {}kgs or {}lbs.'.format(userHeight, roundedUserHeightInches, userWeight, roundedUserWeightPounds))
+  print('')
+  print('My mates name is {} and my mates age is {}.'.format(mateName, mateAge))
+  print('My mates height is {}cms or {}" and my mates weight is {}kgs or {}lbs.'.format(mateHeight, roundedMateHeightInches, mateWeight, roundedMateWeightPounds))
+  print('')
+  print ('The diffence in our heights is {}cms or {}", {}kgs or {}lbs in weight and {} years in age'.format (heightDiffCm, roundedHeightDiffInches, weightDiffKgs, roundedWeightDiffPounds, ageGap))
+  import time
+  time.sleep(5)
+  print('')
+  info()
+
+info()
